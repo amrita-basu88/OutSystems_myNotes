@@ -38,8 +38,37 @@ Every application has objects which can be categorized into - **Process**, **Int
 3. You can set the **Roles** for a Web Screen. If you allow Anonymous role, you do not need to login to view the app in the cloud. 
 
 
-
 ### Video3 (Create a Detail Screen for a Record):
+
+1. Think of this as creating a Record Summary View in Appian.
+2. You can link each Contact to the relevant `ContactDetail` screen.
+3. The `ContactDetail` screen will take a Input Parameter called `ContactId` - to show the details of the clicked Contact. Think of it like a `Rule Parameter - ri!` in Appian. You can create multiple Input parameters for each Web Screen.
+4. Instead of having something called a `a!recordLink()` , you can use the `Link to` feature from the UI, then select the destination web screen. 
+5. You need to provide the `CurrentRecord.ContactId` - which will be set to the property of the Link.
+
+
+
+### Video4 (Edit a Record from the Database):
+
+1. You can have Buttons - Save and Cancel on the `ContactDetail` screen.
+2. A Button can have an associated **Screen Action** which encapsulates the logic to execute when that Button is clicked. For eg: You may have a Screen Action to save the data to a database. The logic is executed at the Server side.
+3. A Button can also have a Destination Web Screen instead of a Screen Action. For eg: you can redirect the user back to the `Contacts` screen after he clicks on the `Cancel` button.
+4. Inside a Screen Action, you can call other Actions - like `UpdateContact` action which updates a record in the database.
+
+
+
+### Video5 (Create a new Record in the Database):
+
+1. You need to use a UI "If" conditional to conditionally display or hide a UI Element on a Web Screen.
+2. There is also a "IF" that you can use while creating the Actions.
+3. In this example, we are calling either the `CreateContact` or `UpdateContact` actions. If the `ContactId` equals `NullIdentifier` then we call the `CreateContact` action.
+4. You can also link some text on Web Screen to an Action or another Web Screen.
+
+
+
+### Video6 (Add Company Table, create pages and logic):
+
+1. ​
 
 
 
@@ -63,9 +92,14 @@ Every application has objects which can be categorized into - **Process**, **Int
 These are some terms used in OutSystems Platform.
 
 - **Preparation** - a preparation is always associated with a Web Screen. It has the logic to execute to render that Web Screen. It may also have the logic to execute after a Web Screen is submitted.
-- **Web Screen** - This is a counter-part to the  `SAIL UI Interface` or `User Input Task` in Appian. It can take input variables. You can have `if` expressions on a Web Screen to conditionally show or hide UI components based on the input variables. The logic for rendering a Web Screen depends on the input variables that it takes.
+- **Web Screen** - This is a counter-part to the  `SAIL UI Interface` or `User Input Task` in Appian. It can take input variables. You can have `if` expressions on a Web Screen to conditionally show or hide UI components based on the input variables. The logic for rendering a Web Screen depends on the input variables that it takes. This is shown by a Rectangle with blue border.
+- **Web Block** - a re-usable screen that can be used in other Web Screens
 - **NullIdentifier** - This is used for stating that the Identifier (Id of some entity) is null. This is a special variable.
-- **Action** - An Action encapsulates custom logic to be executed. Multiple actions can be used in a **Preparation**. In a way, an Action is like a Smart Service in Appian. These are black-boxes whose implementation is usually hidden. Example: An Action maybe like "CreateOrUpdateContact", "DeleteContact" etc. An Action is shown by an Orange icon in the Service Studio.
+- **Action** - An Action encapsulates custom logic to be executed on the server side. Multiple actions can be used in a **Preparation**. In a way, an Action is like a Smart Service in Appian. These are black-boxes whose implementation is usually hidden. Example: An Action maybe like "CreateOrUpdateContact", "DeleteContact" etc. An Action is shown by an Orange icon in the Service Studio.
+- **Screen Action** - A screen action is used for things like submitting the data from a form to the server.
+- **UI IF** - A UI If conditional allows you to conditionally display or hide a UI component.
+
+
 
 
 
