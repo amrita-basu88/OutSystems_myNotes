@@ -68,7 +68,30 @@ Every application has objects which can be categorized into - **Process**, **Int
 
 ### Video6 (Add Company Table, create pages and logic):
 
-1. ​
+1. In this video, we created a new Entity - Company. We also added the pages for Companies and Company Detail. We created a preparation and Save actions for them.
+2. We also added them to the main workflow. 
+3. Now, you can add a link in the common menu bar. We added a link in the Contacts page to the Companies page.
+4. To quickly setup a link from the Contacts page to the Companies page, you just have to drop the Web Screen for the Companies in the Menu bar of the Contacts page. Caveat: The common menu bar does not appear until you preview your page in the desktop/tablet mode. You can add the menu and then turn off the preview.
+
+
+
+
+### Video7 (Create and Display a Relationship):
+
+1. You can generate Entity Diagram by going under "Data". You can click on "Add Entity Diagram". Then you can add Entities in it.
+2. To add a relationship between Company and Contact, we created a `CompanyId` attribute in the Contact entity. The platform understands automatically that you mean to create a foreign key that references the Id in the Company Entity. It updates the data model accordingly. The  Entity diagram will get updated automatically and display the updated relationship.  Note: It is possible to view what SQL query will actually be executed and the type of SQL Join that will be used.
+3. In the Contact Details Web Screen, you can now add the `CompnayId` attribute in the Form Widget. The platform will automatically create a combo box with the associated Company Names.  The platform infers that the Name attribute of the Company is the appropriate attribute to show in the combo box.
+4. Thus, you can now associate a Contact with a Company on the UI. For every contact, you will be presented with the available Companies to choose from. 
+
+
+
+### Video8 (Page Lifecycle Overview | Using the Debugger):
+
+1. To add a Breakpoint to any object, just select it and press the key **F8**.
+2. After adding the Breakpoints, you can start the debugger and then start the application using 1-click publish.
+3. Use **F9** to step at a time.
+4. To see a value of a variable under `Locals`, you need to double click on the variable name. It will show all the values for that variable, even if it is a complex aggregate. For simple values, the variables are displayed inline.
+
 
 
 
@@ -107,6 +130,9 @@ These are some terms used in OutSystems Platform.
 
 1. The data modelling is very flexible. It is totally visual. We can model the entities and the relationships among them visually and also update the UI accordingly. It can be done very quickly - at-least for the most basic use cases. You can denote relationships using Foreign Key constraint visually in the Service Studio.  OutSystems outsmarts Appian (as of version 16.2) in this aspect.
 2. OutSystems has a lot of variety in Charts/Reports when it comes to Analytics (seen in the demo). There are many different charts to choose from. Also a great amount of customization is possible with those charts in OutSystems. This is an Advantage over Appian. Although, it  would not be so difficult for Appian to bring in more charts(and more options to customize them) in the later versions. 
+3. The development can be done on a local environment as well as in the cloud. It can be published to the cloud with one click from your local machine. When developing on the local environment, it downloads the code to your machine by connecting to the cloud. This allows flexibility - it makes it possible to develop offline.
+4. The Debugger is a very good tool for the developers. It is better than the `Monitor Process Instance` in Appian (which does not have all the features of a debugger). It lets you set breakpoints, step in, step over etc. It enables the developers to closely look at how their application is behaving and inspect all the variables of interest.
+5. You need not create a process model for everything.  You can have a workflow without having a process. In Appian, every workflow needs to be backed by a process model.
 
 
 
