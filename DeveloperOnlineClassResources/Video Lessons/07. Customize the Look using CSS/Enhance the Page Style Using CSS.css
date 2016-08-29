@@ -1,0 +1,15 @@
+.IssueContainer {
+	margin-bottom: 20px;
+}
+
+.HighPriority {
+	color: #E70101;
+}
+
+.LowPriority {
+	color: #F28900;
+}
+
+body, select, textarea, input, table {
+	font-family: Verdana;
+}

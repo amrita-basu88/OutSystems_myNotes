@@ -1,0 +1,7 @@
+div.Header {
+	background-color: #eee;
+}
+
+div.Header > div {
+	background: url(img/silhouettes_right.png) no-repeat right bottom;
+} 

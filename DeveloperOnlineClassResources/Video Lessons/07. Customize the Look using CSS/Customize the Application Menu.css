@@ -1,0 +1,28 @@
+.Notification {
+    background-color: #dddddd;
+    border-radius: 2px 2px 2px 2px;
+    color: #666666;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 2px 4px;
+    position: relative;
+    top: -1px;
+}
+.Menu_TopMenu:hover .Notification,
+.Menu_TopMenuActive .Notification {
+    background-color: #3488B2;
+    color: #ffffff;
+}
+.Menu_TopMenuActive,
+.Menu_TopMenu:hover {
+    border-bottom: 3px solid #3488B2;
+}
+.Menu_TopMenu:hover a,
+.Menu_TopMenuActive a,
+.Menu_TopMenuActive a:link,
+.Menu_TopMenuActive a:visited,
+.Menu_SubMenuItemActive:visited,
+.Menu_SubMenuItem:hover {
+    color: #3488B2;
+}
