@@ -137,7 +137,7 @@ These are some terms used in OutSystems Platform.
 
 
 
-
+### OutSystems Architecture
 
 Service Studio - The IDE commonly used by OutSystems Developers
 
@@ -171,5 +171,54 @@ Assignments Materials - contains CSS, images, JS required
 
 
 
+
+
+### Shortcuts:
+
+Pressing F1 takes you to the Help page of that object.
+
+Ctrl + N when creating Entity Attributes helps you to quickly add a New Attribute to Entity
+
+
+
 ### Use Entities to Model Data:
 
+The Is Mandatory property of Entity attribute does not actually make a required constraint in DB.
+
+It just makes sure that the platform server ensures that the value is filled at run-time. The platform uses it for input field validation
+
+
+
+#### Calculated Attribute - to be noted
+
+CurrDate() function gives todays date
+
+Concat(t1, t2) - concatenate two strings
+
+
+
+#### Delete rule property
+
+Determines if the associated entity should also be deleted. If set to "Protected" it wont delete.
+
+
+
+### Structure
+
+A Structure is like a Entity. It also has attributes. But it does not have Identifier and it cannot be saved to database. The output of raw SQL queries can be stored in Structure. Structures are not persistent.
+
+
+
+#### Assign Node:
+
+Used to assign the output of an action to a variable
+
+
+
+OrderForm.Record - references the mapped Record on OrderForm. If only one record is mapped it will automatically point to it. ELse you need to be specific.
+
+
+
+### Static Entity/ Look up Table
+
+Contains rows which are assigned at design time only. Example: you may have a Static Entity to store the Status - with Only three values: New, Shipped, Cancelled
