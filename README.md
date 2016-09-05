@@ -222,3 +222,181 @@ OrderForm.Record - references the mapped Record on OrderForm. If only one record
 ### Static Entity/ Look up Table
 
 Contains rows which are assigned at design time only. Example: you may have a Static Entity to store the Status - with Only three values: New, Shipped, Cancelled
+
+
+
+We need to set special value for options like 'None', 'Please Select' for Combo box
+
+
+
+Form.Valid property indicates if a form is Valid i.e if all the fields on the form are valid
+
+using ValidationMessage property of the Widget you can show custom validations for the fields.
+
+
+
+Set the Validation to "Client and Server" to enable Client side validations.
+
+
+
+In OutSystems, Business logic is done in Preparation, or in Screen Action or user actions.. under Logic tab you can add Actions.
+
+
+
+### About Web Blocks
+
+A web block can have its own Preparation.
+
+You can just drag the web block to a web screen. 
+
+The preparation of the parent Web screen is executed first. The preparation of the Web block is followed later.
+
+
+
+You can have nested web blocks (a web block based on another web block). You can nest web blocks as much as possible. Only restriction - you cannot nest a web block in itself.
+
+
+
+Actually the Menu, the Application Header are itself made of Web Blocks.
+
+These Web Blocks can also have preparation and customized using CSS.
+
+
+
+The widget needs to have the "Name" property set for a 'Ajax Submit'.
+
+
+
+### Difference Between a Screen Action and an Action
+
+A screen action always has access to the local variables or the widgets used in that Web Screen.
+
+An action does not have access to the local variables of a screen action. It can however have input parameters.
+
+
+
+### Aggregates vs Advanced Query
+
+Aggregates are the recommended way for DB queries. Use the "Refresh Data" query when you want to re-execute a agreegate or an advanced query.
+
+
+
+### Notify Widget Action
+
+The NotifyWidget action is a [System  Action](http://www.outsystems.com/help/servicestudio/9.0/Language_Reference/System_Actions_and_Functions/Overview_of_System_Actions_and_Functions.htm) that allows Web Blocks to notify their parent ([Web  Screen](http://www.outsystems.com/help/servicestudio/9.0/Web_User_Interface/About_Web_Screens.htm) or [Web  Block](http://www.outsystems.com/help/servicestudio/9.0/Miscellaneous/Reuse_screens/About_Screen_Blocks.htm)) that a relevant event has occurred. When a Web Block uses the  Notify Widget, the parent element needs to specify a screen action that  will be called after the notification is sent.To use the Notify Widget, proceed as follows:
+
+1. In the Web Block use the Notify Widget as part of the logic;
+   2. On every usage of the Web Block (in both Web Screens and Web Blocks)  specify the [Screen 	 Action](http://www.outsystems.com/help/servicestudio/9.0/Designing_Actions/Create_a_Screen_Action.htm) that will handle the notification by setting the On Notify property of the Web Block. 
+
+
+
+### A good comparison of Ajax Submit and Server Submit
+
+https://youtu.be/5myb1yveUNc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+​            
+
+ 
+
+​	9.2. Sort Columns in a List - OutSystems            
+
+You need to use the function List_SortColumn_GetOrderBy in Aggregates for Dynamic sorting.
+
+
+
+
+
+### Pop-up Editor
+
+Widget - Popup_Editor
+
+Actions - PopEditor_Close() and PopupEditor_Notify()
+
+Notify action always notifies the parent WebBlock or parent Screen. Yes, you can have cascading Notifies.
+
+
+
+
+
+### Charts:
+
+Need a `DataPoint` structure. You need to convert the data to represent in a DataPoint Structure to display in a Chart. All charts basically take a List of DataPoints as input
+
+
+
+### Roles and Groups:
+
+To create a new User in your personal cloud, go to http://yourpersonalcloud.com/Users
+
+A group can be associated with multiple roles.
+
+Roles are the mechanism by which you can control what operations can be done by users.
+
+Using groups, you can grant or revoke the roles to multiple users(belonging to the same group) in one go.
+
+So, a Group can have multiple roles.
+
+
+
+### Re-using Elements from other Applications/Modules:
+
+You can reuse the objects from other applications/modules in your application/module.
+
+You have to make the object as "Public" if you want it to be able to be used in other applications.
+
+Then you can click on "Manage Dependencies" icon in the IDE, enter the name of the application from which you want to select the element. Service Studio will pick that element along with its dependencies and make it available to your application.
+
+
+
+When a element which is being reused from another application(the Producer application) and if it gets changed, the consumer (dependent) application will show warning when you open it next time. It will say "the application contains outdated references. You can use Manage Dependencies for updating the references". You can then open the "Manage Dependencies" tool and find the elements which are outdated and refresh them. This will cause the elements to be updated in the Consumer application. 
+
+
+
+### Questions:
+
+1. Can we have cascading notifications between widgets? Let's say I have notified a parent widget from a child widget to re-render. I want the parent widget in-turn to notify its own parent. Can this be done?
+2. Can an aggregate have an output like an advanced query?
+3. Does OutSystems have any in-built features/third-party connectors for Document management and versioning? Also does it have any features for generating or manipulating documents(especially word/excel and PDF)?
+4. How can we use the ListAppendAll action instead of the ListAppend action to  create DataPoints? What is the syntax to create a literal List in OutSystems
+5. I tried to find the usages of the RichWidget "Feedback_Message" using the "Find usages". It returned "No usages" in the results. I don't see that widget used anywhere in the headers of common screenflows. Still, I used the "Feedback_Message" action in my screen action and I was able to get the feedback message in my application. Can anyone let me know if they can find the usages for "Feedback Message" richwidget on OutSystems 9?
+
+
+
+
+
