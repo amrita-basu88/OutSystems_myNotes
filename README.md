@@ -384,7 +384,21 @@ Then you can click on "Manage Dependencies" icon in the IDE, enter the name of t
 
 
 
-When a element which is being reused from another application(the Producer application) and if it gets changed, the consumer (dependent) application will show warning when you open it next time. It will say "the application contains outdated references. You can use Manage Dependencies for updating the references". You can then open the "Manage Dependencies" tool and find the elements which are outdated and refresh them. This will cause the elements to be updated in the Consumer application. 
+When a element which is being reused from another application(the Producer application) and if it gets changed, the consumer (dependent) application will show warning when you open it next time. It will say "the application contains outdated references. You can use Manage Dependencies for updating the references". You can then open the "Manage Dependencies" tool and find the elements which are outdated and refresh them. This will cause the elements to be updated in the Consumer application.
+
+To Debug logic used from another application, you need to "Select entry eSpace" from the "Debugger" menu. This will set a different entry point from the producer application. 
+
+Every application has a different eSpace.
+
+
+
+### (OutSystems Forge)[http://outsystems.com/forge]
+
+Forge is a repository of Open-Source and Pre-built OutSystems components, widgets and Applications.
+
+You can use the ready-made applications directly in your application.
+
+
 
 
 
