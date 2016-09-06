@@ -288,6 +288,8 @@ The NotifyWidget action is a [System  Action](http://www.outsystems.com/help/ser
 1. In the Web Block use the Notify Widget as part of the logic;
    2. On every usage of the Web Block (in both Web Screens and Web Blocks)  specify the [Screen 	 Action](http://www.outsystems.com/help/servicestudio/9.0/Designing_Actions/Create_a_Screen_Action.htm) that will handle the notification by setting the On Notify property of the Web Block. 
 
+   Notify Widget cannot be used in Screen Action. It can be used only inside the Web Blocks.
+
 
 
 ### A good comparison of Ajax Submit and Server Submit
