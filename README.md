@@ -402,6 +402,49 @@ You can use the ready-made applications directly in your application.
 
 
 
+### Some quick facts:
+
+1. A Mandatory attribute on a entity does not create a database constraint.
+2. An Action is a reusable logic.  A User defined action can also be exposed as a function optionally.
+
+
+
+### Security in OutSystems:
+
+1. By using Roles
+2. By Integrated Authentication - uses Windows Authentication - works only with the .NET stack.
+3. Internal Access - you can specify the IP range which should be allowed the access.
+4. HTTPS: To use SSL protocol on top of HTTP with or without client certificates.
+
+
+
+### Business Process Technology in OutSystems:
+
+1. You can create process in OutSys.
+2. A process can be launched by either an action or by some event on an Entity.
+3. A process contains Activities. Some activities may be automated one, some may be "Human Activities" - similar to "User Input Tasks" in Appian.
+
+
+
+### Sample Application to create:
+
+Employee Skills Management.
+
+an application which will allow to track employees by their skills. Each employee can update, add and edit their skills. An employee can have a developer, QA or a managerial track. The skill sets are different for each track (which means a skill belongs to only a particular track). Also have a Project allocation team which will track the employees which have relevant skills for a project. Each skill of an employee will have attributes like - recently worked on, total experience, highest certification  for that skill, date of certification etc..
+
+An employee should be able to:
+
+1. Update his skills
+2. Add, edit or remove them.
+
+Project allocation team should be able to raise a request for number of employees they need for a project.
+
+The system should use an algorithm and return the employees which match the criteria and show those employees. Once an employee is mapped to a project, that employee should not be considered for the next request. Project allocation team should also be able to de-allocate an employee from a project.
+
+
+
+A skill can be associated with only one career track
+
 
 
 ### Questions:
