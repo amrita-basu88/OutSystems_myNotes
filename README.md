@@ -251,19 +251,17 @@ You can just drag the web block to a web screen.
 
 The preparation of the parent Web screen is executed first. The preparation of the Web block is followed later.
 
-
-
 You can have nested web blocks (a web block based on another web block). You can nest web blocks as much as possible. Only restriction - you cannot nest a web block in itself.
-
-
 
 Actually the Menu, the Application Header are itself made of Web Blocks.
 
 These Web Blocks can also have preparation and customized using CSS.
 
-
+A web block cannot have an output parameter.  The outwards communication is achieved by using the Notify and ScreenActions (like OnNotify). Even a Web Screen cannot have Output parameter.
 
 The widget needs to have the "Name" property set for a 'Ajax Submit'.
+
+
 
 
 
